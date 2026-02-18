@@ -128,12 +128,23 @@
             border-color: #08978d;
             color: #08978d;
         }
+        .vcf-info {
+            font-size: 12px;
+            color: #999;
+            margin-top: 8px;
+            line-height: 1.3;
+            display: none;
+        }
         @media (max-width: 480px) {
             .card {
                 padding: 30px 20px;
                 margin: 10px;
             }
             h2 { font-size: 24px; }
+            .vcf-info { display: block; }
+        }
+        @media (hover: none) {
+            .vcf-info { display: block; }
         }
     </style>
 </head>
@@ -154,8 +165,11 @@
             <i class="fab fa-whatsapp icon"></i> WhatsApp
         </a>
 
-        <a href="ali.vcf" class="btn btn-save">
+        <a href="ali.vcf" class="btn btn-save" download="ali.vcf">
             <i class="fas fa-user-plus icon"></i> Ajouter aux contacts
+            <div class="vcf-info">
+                Ouvrir → Contacts → Enregistrer
+            </div>
         </a>
 
         <a href="https://www.google.com/maps/search/?api=1&query=Atmostech+Casablanca" target="_blank" class="btn btn-maps">
