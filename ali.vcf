@@ -1,11 +1,14 @@
 BEGIN:VCARD
 VERSION:3.0
-N:ALAOUI;Ali;;;
+N:ALAOUI;Ali;EL;;;
 FN:EL ALAOUI Ali
-ORG:ATMOSTECH
+ORG:Atmostech
 TITLE:Directeur général
 TEL;TYPE=CELL:+212660703601
 TEL;TYPE=WORK:+212660703601
 URL:https://atmostech.ma
+EMAIL:contact@atmostech.ma
+GEO:33.5731;-7.5898
 NOTE:Arduino Raspberry-pi & Composants électroniques | Maroc
+REV:2026-02-18T15:00:00Z
 END:VCARD
