@@ -3,65 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - EL ALAOUI Ali</title>
+    <title>Contact - EL ALAOUI Ali | Atmostech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #08978d 0%, #067d6b 50%, #046057 100%);
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            min-height: 100vh;
+            padding: 20px;
         }
         .card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 40px 30px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(8, 151, 141, 0.2);
             text-align: center;
-            max-width: 300px;
-            width: 90%;
-        }
-        h2 { margin-bottom: 5px; color: #333; }
-        p { color: #666; margin-bottom: 25px; }
-        .btn {
-            display: block;
+            max-width: 360px;
             width: 100%;
-            padding: 15px 0;
-            margin: 10px 0;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            transition: background 0.3s;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(8, 151, 141, 0.1);
         }
-        /* Couleurs des boutons */
-        .btn-whatsapp { background-color: #25D366; color: white; }
-        .btn-phone { background-color: #007BFF; color: white; }
-        .btn-site { background-color: #333; color: white; }
-        
-        .btn:hover { opacity: 0.9; }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #08978d, #067d6b);
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(8, 151, 141, 0.3);
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background-image: url('ali.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 4px solid #08978d;
+            box-shadow: 0 10px 20px rgba(8, 151, 141, 0.2);
+        }
+        h2 {
+            color: #1a1a1a;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .title {
+            color: #666;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 32px;
+            line-height: 1.4;
+        }
+        .title span {
+            display: block;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        .btn:hover::before {
+            left: 100%;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .icon {
+            margin-right: 12px;
+            font-size: 20px;
+        }
+        .btn-phone { background: linear-gradient(135deg, #007BFF, #0056b3); }
+        .btn-whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); }
+        .btn-save { background: linear-gradient(135deg, #2c3e50, #34495e); }
+        .btn-maps { background: linear-gradient(135deg, #EA4335, #c5221f); }
+        .btn-site { 
+            background: white; 
+            color: #333; 
+            border: 2px solid #e0e0e0; 
+            font-weight: 600;
+        }
+        .btn-site:hover {
+            background: #f8f9fa;
+            border-color: #08978d;
+            color: #08978d;
+        }
+        @media (max-width: 480px) {
+            .card {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+            h2 { font-size: 24px; }
+        }
     </style>
 </head>
 <body>
-
     <div class="card">
+        <div class="avatar"></div>
         <h2>EL ALAOUI Ali</h2>
-        <p>Atmostech</p>
-
-        <a href="https://wa.me/212660703601" class="btn btn-whatsapp">
-            Envoyer un WhatsApp
-        </a>
+        <p class="title">
+            <span>Directeur général</span>
+            <span>Atmostech</span>
+        </p>
 
         <a href="tel:+212660703601" class="btn btn-phone">
-            Appeler
+            <i class="fas fa-phone icon"></i> Appeler maintenant
         </a>
 
-        <a href="https://atmostech.ma" class="btn btn-site">
-            Visiter atmostech.ma
+        <a href="https://wa.me/212660703601" class="btn btn-whatsapp">
+            <i class="fab fa-whatsapp icon"></i> WhatsApp
+        </a>
+
+        <a href="ali.vcf" class="btn btn-save">
+            <i class="fas fa-user-plus icon"></i> Ajouter aux contacts
+        </a>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Atmostech+Casablanca" target="_blank" class="btn btn-maps">
+            <i class="fas fa-map-marker-alt icon"></i> Localiser le bureau
+        </a>
+
+        <a href="https://atmostech.ma" target="_blank" class="btn btn-site">
+            <i class="fas fa-globe icon"></i> Site officiel
         </a>
     </div>
-
 </body>
 </html>
